@@ -27,6 +27,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+Client-side routing is handled internally instead of sending requests to the server everytime. This saves time when going back and forth between views. 
+
 > Answer:
 
 ## Project Set Up
