@@ -5,6 +5,8 @@ import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
 
+import "./styles.scss";
+
 export default function App() {
   return (
     <main>

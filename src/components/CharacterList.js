@@ -26,8 +26,8 @@ export default function CharacterList(props) {
       <SearchForm {...props} characters={characters} setFound={(ch) => setFound(ch)}/>
       <h2>{found ? found.name : "Not Found"}</h2>
       <Route path ='/character/:name' render={props => <CharacterCard {...props} character={found}/>}/>
+        <h2 className="character-header">Character List</h2>
       <section className="character-list">
-        <h2>Character List</h2>
         
           {characters.map(character => (
             <CharacterCard {...props} key={character.id} character={character}/>
