@@ -1,0 +1,22 @@
+.main-img{
+   padding-left: 35%;
+   
+}
+.home-page{
+    font: black;
+}
+.character-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 2;
+}
+.character-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.character-header{
+    display: flex;
+    padding-left: 40%;
+}

@@ -1,16 +1,39 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Route } from "react-router-dom";
 
-export default function CharacterList() {
+import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
+
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
+  const [characters, setCharacters] = useState([]);
+  const [found, setFound] = useState(false);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+    axios
+      .get('https://rick-api.herokuapp.com/api/character/')
+      .then(res => {
+        console.log(res);
+        setCharacters(res.data.results);
+      })
   }, []);
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+    <div>
+      <SearchForm {...props} characters={characters} setFound={(ch) => setFound(ch)}/>
+      <h2>{found ? found.name : "Not Found"}</h2>
+      <Route path ='/character/:name' render={props => <CharacterCard {...props} character={found}/>}/>
+        <h2 className="character-header">Character List</h2>
+      <section className="character-list">
+        
+          {characters.map(character => (
+            <CharacterCard {...props} key={character.id} character={character}/>
+          ))}
+        
+      </section>
+    </div>
   );
 }

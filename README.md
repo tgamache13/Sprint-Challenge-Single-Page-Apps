@@ -27,6 +27,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
+Client-side routing is handled internally instead of sending requests to the server everytime. This saves time when going back and forth between views. 
+
 > Answer:
 
 ## Project Set Up
@@ -50,7 +52,7 @@ Follow these steps to set up and work on your project:
 
 If the [main API service](https://rickandmortyapi.com/documentation) goes down, or you exceed rate limits, try the following URL:
 
-**[Backup URL:](https://rick-api.herokuapp.com/api/)** `https://rick-api.herokuapp.com/api/`
+**[Backup URL:](https://rick-api.hcom/api/erokuapp.)** `https://rick-api.herokuapp.com/api/`
 
 You can still be locked out - watch your [chrome devtools' network panel](https://developers.google.com/web/tools/chrome-devtools/network/reference) to make sure you aren't making too many requests.
 </details>
